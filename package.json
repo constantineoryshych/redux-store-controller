@@ -1,0 +1,43 @@
+{
+  "name": "bbt-provider",
+  "version": "0.0.1-alpha",
+  "description": "Storage for object structure data with subscribing for changes in fields of this data",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "docs": "typedoc --out ./docs ./source/ts",
+    "compile": "tsc --pretty --outDir lib & babel lib --out-dir lib",
+    "prepublish": "rimraf ./lib & npm run test & npm run compile",
+    "babel:node": "babel-node --extensions \".js\",\".ts\" ./source/ts/index.ts",
+    "lint": "tslint -c tslint.json --project ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/constantineoryshych/redux-store-controller.git"
+  },
+  "keywords": [],
+  "author": "constantineoryshych",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/constantineoryshych/redux-store-controller/issues"
+  },
+  "homepage": "https://github.com/constantineoryshych/redux-store-controller#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.2",
+    "@babel/core": "^7.0.0-rc.2",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-rc.2",
+    "@babel/preset-env": "^7.0.0-rc.2",
+    "@babel/preset-typescript": "^7.0.0-rc.2",
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.7.1",
+    "babel-preset-minify": "^0.4.3",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.11.0",
+    "tslint-config-bbt": "git+https://github.com/blackbird-team/tslint-config-bbt.git",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.9.2"
+  }
+}
